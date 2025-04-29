@@ -1,0 +1,132 @@
+[
+  {
+    "title": "taj mahal",
+    "city": "agra",
+    "address": "Somewhere in india",
+    "distance": 300,
+    "price": 1099,
+    "maxGroupSize": 10,
+    "desc": "The iconic white marble mausoleum and symbol of love.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img01.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Jaipur City Palace",
+    "city": "Rajasthan",
+    "address": "Somewhere ",
+    "distance": 400,
+    "price": 1099,
+    "maxGroupSize": 8,
+    "desc": "A blend of Rajasthani and Mughal architecture in the Pink City",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img02.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Backwaters",
+    "city": "Kerala",
+    "address": "Somewhere",
+    "distance": 500,
+    "price":1099,
+    "maxGroupSize": 8,
+    "desc": "A serene network of lagoons, rivers, and lakes best explored by houseboat.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img03.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Varanasi Ghats",
+    "city": "Uttar Pradesh",
+    "address": "Somewhere in",
+    "distance": 500,
+    "price": 1099,
+    "maxGroupSize": 8,
+    "desc": "Spiritual steps along the Ganges, known for rituals and vibrant culture.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img04.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Meenakshi Temple",
+    "city": "Madurai",
+    "address": "Somewhere",
+    "distance": 500,
+    "price": 1099,
+    "maxGroupSize": 8,
+    "desc": "A colorful, intricately carved Dravidian-style Hindu temple.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img05.jpg",
+    "featured": true
+  },
+  {
+    "title": "Golden Temple",
+    "city": " Amritsar",
+    "address": "Somewhere",
+    "distance": 500,
+    "price": 99,
+    "maxGroupSize": 8,
+    "desc": "A sacred Sikh shrine with a stunning gold-plated dome and serene lake.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img06.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Holmen Lofoten, France",
+    "city": "Paris",
+    "address": "Somewhere in France",
+    "distance": 500,
+    "price": 99,
+    "maxGroupSize": 8,
+    "desc": "this is the description",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img07.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Snowy Mountains, Thailand",
+    "city": "Bangkok",
+    "address": "Somewhere in Thailand",
+    "distance": 500,
+    "price": 99,
+    "maxGroupSize": 8,
+    "desc": "this is the description",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img03.jpeg",
+    "featured": true
+  },
+  {
+    "title": "Jaflong, Sylhet",
+    "city": "Sylhet",
+    "address": "Somewhere in Sylhet",
+    "distance": 100,
+    "price": 99,
+    "maxGroupSize": 5,
+    "desc": "this is the description",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img08.jpeg",
+    "featured": false
+  },
+  {
+    "title": "Cox's Bazar Sea Beach",
+    "city": "Chittagong",
+    "address": "Somewhere in Chittagong",
+    "distance": 500,
+    "price": 99,
+    "maxGroupSize": 8,
+    "desc": "this is the description",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img09.jpeg",
+    "featured": false
+  }
+]
