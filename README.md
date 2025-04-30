@@ -1,2 +1,2 @@
 for run frontend npm run build 
-and for backend npmm run start-dev
+and for backend npm run start-dev
