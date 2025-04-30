@@ -8,14 +8,14 @@ import Booking from '../components/Booking/Booking';
 import Newsletter from '../shared/Newsletter';
 import { BASE_URL } from '../utils/config';
 import useFetch from '../hooks/useFetch';
-import { authContex } from '../context/AuthContext';
+
 import { AuthContext } from '../context/AuthContext';
 
 const TourDetails = () => {
   const { id } = useParams();
   const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
   const reviewMsgRef = useRef('');
-  const { user ,dispatch} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [tourRating, setTourRating] = useState(null);
 
   // Scroll to top when the tour data changes
@@ -83,14 +83,8 @@ const TourDetails = () => {
       setTourRating(null);
     }
   };
-  const handleLogout = () => {
-    dispatch({ type: "LOGOUT" });
-    localStorage.removeItem("user");
-  };
-  const handleLogin = () => {
-    // Logic to handle login
-    // For example, redirect to login page or show a login modal
-  };
+  
+ 
 
   return (
     <section>
