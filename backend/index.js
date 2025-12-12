@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser';
 import tourRoutes from './routes/tours.js'; // Correct import
 import userRoute from './routes/users.js'; // Correct import
 import authRoute from './routes/auth.js'; // Correct import
-import reviewRoute from './routes/review.js'; // Correct import
+import reviewRoute from './routes/reviews.js'; // Correct import
 import bookingRoute from './routes/booking.js'; // Correct import
 
 dotenv.config();
@@ -21,16 +21,21 @@ const corsOptions = {
 // Database connection
 mongoose.set("strictQuery", false);
  // Disable strict query mode
-const connectDB = async () => {
+ const connectDB = async () => {
     try {
-        console.log('MONGO_URI:', process.env.MONGO_URI); // Debugging log
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB connected successfully');
+      console.log('MONGO_URI:', process.env.MONGO_URI);
+      await mongoose.connect(process.env.MONGO_URI, {
+        serverSelectionTimeoutMS: 30000,
+        socketTimeoutMS: 30000,
+      });
+      console.log('MongoDB connected successfully');
     } catch (error) {
-        console.error('MongoDB connection failed:', error.message);
-        process.exit(1); // Exit the process with failure
+      console.error('MongoDB connection failed:', error.message);
+      process.exit(1);
     }
-};
+  };
+  
+
 
 // Middleware
 app.use(express.json());

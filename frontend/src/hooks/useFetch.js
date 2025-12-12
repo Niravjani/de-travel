@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null); // Add setData
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ const useFetch = (url) => {
           return;
         }
         const result = await response.json();
-        setData(result.data); // Assuming the API response has a [data](http://_vscodecontentref_/1) field
+        setData(result); // Set the fetched data
       } catch (err) {
         setError(err.message);
         console.error("Fetch error:", err); // Debugging log
