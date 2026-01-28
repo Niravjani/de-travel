@@ -6,7 +6,8 @@ import cookieParser from 'cookie-parser';
 import tourRoutes from './routes/tours.js'; // Correct import
 import userRoute from './routes/users.js'; // Correct import
 import authRoute from './routes/auth.js'; // Correct import
-import reviewRoute from './routes/reviews.js'; // Correct import
+import reviewRoutes from './routes/reviews.js';
+
 import bookingRoute from './routes/booking.js'; // Correct import
 
 dotenv.config();
@@ -44,7 +45,7 @@ app.use(cookieParser());
 app.use('/api/v1/auth', authRoute); // Correct
 app.use('/api/v1/tours', tourRoutes); // Correct
 app.use('/api/v1/users', userRoute); // Correct
-app.use('/api/v1/review', reviewRoute); // Correct
+app.use('/api/v1/review', reviewRoutes);
 app.use('/api/v1/booking', bookingRoute); // Correct
 
 

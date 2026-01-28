@@ -24,7 +24,7 @@ export const updateUser = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Successfully updated",
-      data: updatedUser, // Corrected variable name
+      data: updateUser, // Corrected variable name
     });
   } catch (err) {
     res.status(500).json({
