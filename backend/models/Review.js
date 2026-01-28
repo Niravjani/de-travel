@@ -1,15 +1,17 @@
-import mongoose from "mongoose";
-
 const reviewSchema = new mongoose.Schema(
   {
-    productId: {
+    tourId: {  // Changed from productId to tourId
       type: mongoose.Types.ObjectId,
       ref: "Tour",
     },
-    username: {
-      type: String,
+    userId: {  // Better than username as it references the User model
+      type: mongoose.Types.ObjectId,
       required: true,
       ref: "User",
+    },
+    username: {  // Keep this if you want to display names easily
+      type: String,
+      required: true,
     },
     reviewText: {
       type: String,
@@ -26,4 +28,7 @@ const reviewSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Review", reviewSchema);
+import mongoose from "mongoose";
+const Review = mongoose.model("Review", reviewSchema);
+
+export default Review;

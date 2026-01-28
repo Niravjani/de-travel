@@ -1,25 +1,23 @@
 import Tour from "../models/Tour.js";
-import Review from "../models/Review.js";   
+import Review from "../models/Review.js";  
 
 //import { getAllTour } from "../controllers/tourController.js";
 
 //router.get("/", getAllTour);
-
-export const createReview = async (req,res) =>{
+export const createReview = async (req, res) => {
     const tourId = req.params.tourId;
-    const newReview = new Review({ ...req.body });
+    const userId = req.user.id; // Assuming you're using authentication
+     const newReview = new Review({ 
+            ...req.body,
+            tourId,
+            userId,
+            username: req.user.username // Or however you store usernames
+        });
     try {
-        const tour = await Tour.findById(tourId);
-        if (!tour) {
-            return res.status(404).json({
-                success: false,
-                message: "Tour not found.",
-            });
-        }
+       
 
         const savedReview = await newReview.save();
-
-        // Update the tour with the new review
+  
         await Tour.findByIdAndUpdate(tourId, {
             $push: { reviews: savedReview._id },
         });
@@ -31,9 +29,9 @@ export const createReview = async (req,res) =>{
         });
     } catch (err) {
         res.status(500).json({
-            success:false,
-            message:"failed to  submitted ",
-            error:err.message,
-         });
+            success: false,
+            message: "Failed to submit review",
+            error: err.message,
+        });
     }
 }
